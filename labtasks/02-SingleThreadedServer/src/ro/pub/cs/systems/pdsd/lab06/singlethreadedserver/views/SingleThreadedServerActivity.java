@@ -68,6 +68,12 @@ public class SingleThreadedServerActivity extends Activity {
 				@Override
 				public void run() {
 					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					try {
 						if (serverSocket != null) {
 							serverSocket.close();
 						}
